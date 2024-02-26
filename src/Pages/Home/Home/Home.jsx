@@ -1,7 +1,9 @@
+import Banner from "../Banner/Banner";
+
 const Home = () => {
     return (
         <div>
-            GGWP
+            <Banner></Banner>
         </div>
     );
 };
