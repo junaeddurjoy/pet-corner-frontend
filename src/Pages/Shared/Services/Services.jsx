@@ -1,7 +1,7 @@
 const Services = ({ item }) => {
     const { disease, image, price, symptoms } = item;
     return (
-        <div className="flex  space-x-4">
+        <div className="flex  space-x-4 p-4 hover:bg-gray-200 rounded-xl">
             <img style={{borderRadius: '0 200px 200px 200px'}} className="w-[90px] h-[70px]" src={image} alt="" />
             <div className="w-full">
                 <div className="flex justify-between ">
