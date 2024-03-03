@@ -4,6 +4,7 @@ import TreatmentCategory from '../TreatmentCategory/TreatmentCategory';
 
 const Treatment = () => {
     const [service] = useTreatment();
+    
     const cat = service.filter(item => item.pet === "cat");
     const dog = service.filter(item => item.pet === "dog");
     const bird = service.filter(item => item.pet === "bird");
@@ -25,6 +26,7 @@ const Treatment = () => {
             {/* cat */}
             <TreatmentCategory
                 diseases={cat}
+                pet={'cat'}
                 title={'Kitten Treatments'}
                 description={"Pamper your feline with premium grooming, nourishing diets, and expert veterinary care. Keep your cat healthy, happy, and purring!"}
                 img={'https://www.purina.co.uk/sites/default/files/2023-03/Hero%20Pedigree%20Cats.jpg'}
@@ -34,6 +36,7 @@ const Treatment = () => {
             {/* dog */}
             <TreatmentCategory
                 diseases={dog}
+                pet={'dog'}
                 title={'Puppy Treatments'}
                 description={"Elevate your pup's wellness with tailored grooming, nutritious meals, and professional veterinary services. Ensure your dog's vitality and wagging tail!"}
                 img={'https://funfactsforkids.com.au/wp-content/uploads/2022/11/1200-x-680px235.png'}
@@ -43,6 +46,7 @@ const Treatment = () => {
             {/* bird */}
             <TreatmentCategory
                 diseases={bird}
+                pet={'bird'}
                 title={'Bird Treatments'}
                 description={"Enhance your feathered friend's life with specialized grooming, balanced diets, and avian healthcare. Nurture your bird's joy and vibrant plumage!"}
                 img={'https://www.thesprucepets.com/thmb/r23RBk0t4DC9UHp2pTzuXLz7Jj4=/3600x0/filters:no_upscale():strip_icc()/popular-small-bird-species-390926-hero-d3d0af7bb6ed4947b0c3c5afb4784456.jpg'}
@@ -51,6 +55,7 @@ const Treatment = () => {
             {/* others */}
             <TreatmentCategory
                 diseases={other}
+                pet={'other'}
                 title={'Other Pets Treatments'}
                 description={"Care for all your pets with specialized grooming, balanced diets, and expert veterinary services. Keep your companions healthy, happy, and thriving!"}
                 img={'https://opensanctuary.org/wp-content/uploads/2019/06/Copy-of-randy-41.jpg'}

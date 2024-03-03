@@ -4,7 +4,7 @@ const useTreatment = () => {
     const [service, setService] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('services.json')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => {
                 setService(data);

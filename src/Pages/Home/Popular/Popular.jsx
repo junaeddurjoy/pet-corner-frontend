@@ -19,7 +19,7 @@ const Popular = () => {
             </SectionTitle>
             <div className="grid md:grid-cols-2 gap-10">
                 {
-                    popularDisease.map(item => <Services key={item.id} item={item}></Services>)
+                    popularDisease.map(item => <Services key={item._id} item={item}></Services>)
                 }
             </div>
         </section>

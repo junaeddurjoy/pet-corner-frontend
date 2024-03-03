@@ -1,36 +1,36 @@
 [
     {
-        "id": 1,
+        "_id": 1,
         "name": "John Smith",
         "details": "I cannot express how grateful I am for the excellent service provided by PetCare Clinic. From the moment I walked in, I felt welcomed and assured that my pet was in good hands. The staff are not only friendly but also incredibly knowledgeable, answering all my questions and addressing all my concerns. The care they provided for my furry friend was exceptional, and I wouldn't hesitate to recommend PetCare Clinic to anyone seeking top-notch pet healthcare.",
         "rating": 5
     },
     {
-        "id": 2,
+        "_id": 2,
         "name": "Emily Johnson",
         "details": "Healthy Paws Veterinary Clinic truly went above and beyond when my dog fell ill. Their dedication and expertise were evident from the first consultation to the follow-up appointments. They provided personalized care tailored to my dog's needs, and I could see the genuine compassion they had for animals. The environment was clean and welcoming, which helped ease my worries during a stressful time. I'm immensely grateful for their support and highly recommend Healthy Paws Veterinary Clinic to all pet owners.",
         "rating": 4.9
     },
     {
-        "id": 3,
+        "_id": 3,
         "name": "Michael Williams",
         "details": "Paws and Claws Pet Hospital provided professional and compassionate care for my cat when she needed it most. The veterinarians and staff demonstrated expertise and empathy throughout the entire process, making a stressful situation much more manageable. They took the time to explain the treatment options and patiently answered all my questions. Thanks to their excellent care, my cat is now healthy and happy again. I can't thank Paws and Claws Pet Hospital enough for their outstanding service.",
         "rating": 4.1
     },
     {
-        "id": 4,
+        "_id": 4,
         "name": "Jessica Brown",
         "details": "When my guinea pig fell seriously ill, I turned to Pet Haven Animal Clinic, and I'm so glad I did. The veterinarians there worked tirelessly to save my beloved pet's life, and their dedication paid off. They provided compassionate care and kept me updated every step of the way. Thanks to their expertise and commitment, my guinea pig made a full recovery. I'm forever grateful to Pet Haven Animal Clinic for their lifesaving efforts and would recommend them to anyone seeking exceptional pet healthcare.",
         "rating": 5
     },
     {
-        "id": 5,
+        "_id": 5,
         "name": "David Wilson",
         "details": "I can't speak highly enough of the care my rabbit received at Furry Friends Veterinary Hospital. The facility is impeccably clean, and the staff are caring and attentive. They treated my rabbit with the utmost respect and provided comprehensive treatment that exceeded my expectations. Their expertise and dedication to animal welfare are truly commendable. Thanks to Furry Friends Veterinary Hospital, my rabbit is now back to his energetic self. I highly recommend them to anyone looking for top-quality veterinary care.",
         "rating": 4.4
     },
     {
-        "id": 6,
+        "_id": 6,
         "name": "Sarah Martinez",
         "details": "Finding a vet who specializes in avian care can be challenging, but Birdsong Veterinary Clinic exceeded all my expectations. The vet here is not only knowledgeable but also genuinely passionate about birds. They provided excellent care for my parrot, addressing his health issues with precision and compassion. The staff were friendly and accommodating, creating a warm and welcoming atmosphere. Thanks to Birdsong Veterinary Clinic, my parrot is thriving once again. I wouldn't hesitate to recommend them to fellow bird owners.",
         "rating": 4.5
