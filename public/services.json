@@ -5,6 +5,7 @@
         "symptoms": "Sneezing, Coughing, Nasal discharge, Fever, Conjunctivitis",
         "image": "https://mewsandmerlot.com/wp-content/uploads/2020/01/URI.png",
         "category": "popular",
+        "pet": "cat",
         "price": "$50"
     },
     {
@@ -13,6 +14,7 @@
         "symptoms": "Vomiting, Bloody diarrhea, Lethargy, Dehydration, Loss of appetite",
         "image": "https://www.azpetvet.com/wp-content/uploads/AdobeStock_315062551-scaled.jpeg",
         "category": "popular",
+        "pet": "dog",
         "price": "$80"
     },
     {
@@ -20,7 +22,8 @@
         "disease": "Avian Respiratory Disease",
         "symptoms": "Sneezing, Coughing, Nasal discharge, Difficulty breathing, Decreased activity",
         "image": "https://cluckin.net/media/posts/307/chicken-with-gaping-mouth-from-aspergillosis.jpg",
-        "category": "bird",
+        "category": "regular",
+        "pet": "bird",
         "price": "$60"
     },
     {
@@ -29,6 +32,7 @@
         "symptoms": "Straining to urinate, Frequent urination, Blood in urine, Urinating outside litter box",
         "image": "https://justcatsclinic.com/wp-content/uploads/2022/08/shutterstock_1887933259.jpg",
         "category": "popular",
+        "pet": "cat",
         "price": "$70"
     },
     {
@@ -36,7 +40,8 @@
         "disease": "Canine Distemper",
         "symptoms": "Fever, Coughing, Vomiting, Diarrhea, Nasal discharge",
         "image": "https://t1.ea.ltmcdn.com/en/posts/8/4/2/canine_distemper_virus_symptoms_treatment_and_home_remedies_248_orig.jpg",
-        "category": "popular",
+        "category": "regular",
+        "pet": "dog",
         "price": "$90"
     },
     {
@@ -44,7 +49,17 @@
         "disease": "Bird Psittacosis",
         "symptoms": "Respiratory signs, Weight loss, Diarrhea, Lethargy, Poor feather condition",
         "image": "https://lbah.com/wp-content/uploads/2020/03/fluffed-bird-ill.jpg",
-        "category": "bird",
+        "category": "regular",
+        "pet": "bird",
         "price": "$70"
+    },
+    {
+        "id": 7,
+        "disease": "Contagious Equine Metritis",
+        "symptoms": "Clinical signs include endometritis, cervicitis and vaginitis of variable severity and a slight to copious mucopurulent vaginal discharge",
+        "image": "https://ceh.vetmed.ucdavis.edu/sites/g/files/dgvnsk4536/files/styles/sf_landscape_16x9/public/images/article/horse-1933681_1920%20web.jpg?h=1a37bc61&itok=bDas65Mi",
+        "category": "regular",
+        "pet": "other",
+        "price": "$90"
     }
 ]
