@@ -5,6 +5,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Treatment from "../Pages/Treatments/Treatment/Treatment";
 import Appointment from "../Pages/Book/Appointment/Appointment";
+import Login from "../Pages/Login/Login";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
             {
                 path: "appointment/:category",
                 element: <Appointment></Appointment>
+            },
+            {
+                path: "login",
+                element: <Login></Login>
             }
         ]
     },
