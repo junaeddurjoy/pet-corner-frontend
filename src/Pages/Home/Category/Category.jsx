@@ -3,12 +3,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
-import slide1 from '../../../../public/category/1.png'
-import slide2 from '../../../../public/category/2.png'
-import slide3 from '../../../../public/category/3.png'
-import slide4 from '../../../../public/category/4.png'
-import slide5 from '../../../../public/category/5.png'
-import slide6 from '../../../../public/category/6.png'
+import slide1 from '../../../assets/category/1.png'
+import slide2 from '../../../assets/category/2.png'
+import slide3 from '../../../assets/category/3.png'
+import slide4 from '../../../assets/category/4.png'
+import slide5 from '../../../assets/category/5.png'
+import slide6 from '../../../assets/category/6.png'
 import SectionTitle from '../../../components/SectionTitle';
 const Category = () => {
     return (
