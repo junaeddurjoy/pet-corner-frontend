@@ -1,28 +1,54 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { FaCartShopping, FaComment, FaUserDoctor } from "react-icons/fa6";
-import { FaHome, FaCalendar, FaCommentMedical } from "react-icons/fa";
+import { FaCartShopping, FaComment, FaEnvelope, FaUserDoctor } from "react-icons/fa6";
+import { FaHome, FaCalendar, FaCommentMedical, FaListAlt, FaBookMedical, FaUserFriends } from "react-icons/fa";
 import { IoTimerSharp } from "react-icons/io5";
+import { IoIosAddCircle } from "react-icons/io";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
+    const [isAdmin]= useAdmin();
     return (
         <div className="flex">
             <div className="w-64 min-h-screen bg-orange-400">
                 <ul className="menu">
-                    <li>
-                        <NavLink to="/dashboard/userHome"><FaHome />User Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/reservation"><FaCalendar />Reservation</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/review"><FaComment />Review</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/cart"><FaCartShopping />My Cart</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/myAppointments"><IoTimerSharp />Appointments</NavLink>
-                    </li>
+                    {
+                        isAdmin ?
+                            <>
+                                <li>
+                                    <NavLink to="/dashboard/adminHome"><FaHome />Admin Home</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/addItems"><IoIosAddCircle />Add Items</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/manageItems"><FaListAlt />Manage Items</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/manageBookings"><FaBookMedical />Manage Bookings</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/allUsers"><FaUserFriends />All Users</NavLink>
+                                </li>
+                            </>
+                            :
+                            <>
+                                <li>
+                                    <NavLink to="/dashboard/userHome"><FaHome />User Home</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/reservation"><FaCalendar />Reservation</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/review"><FaComment />Review</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/cart"><FaCartShopping />My Cart</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/dashboard/myAppointments"><IoTimerSharp />Appointments</NavLink>
+                                </li>
+                            </>
+                    }
                     <div className="divider"></div>
                     <li>
                         <NavLink to="/"><FaHome />Home</NavLink>
@@ -32,6 +58,9 @@ const Dashboard = () => {
                     </li>
                     <li>
                         <NavLink to="/appointment/all"><FaCommentMedical />Appointment</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/contact"><FaEnvelope />Contact</NavLink>
                     </li>
                 </ul>
             </div>

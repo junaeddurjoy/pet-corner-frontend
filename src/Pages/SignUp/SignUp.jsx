@@ -3,10 +3,12 @@ import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from 'sweetalert2'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const SignUp = () => {
-
+    const axiosPublic = useAxiosPublic();
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
     const { createUser, updateUserProfile } = useContext(AuthContext);
 
@@ -19,26 +21,24 @@ const SignUp = () => {
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
-                        console.log('user profile updated');
-                        reset();
-                        Swal.fire({
-                            title: "SignUp Successful",
-                            showClass: {
-                                popup: `
-                        animate__animated
-                        animate__fadeInUp
-                        animate__faster
-                    `
-                            },
-                            hideClass: {
-                                popup: `
-                        animate__animated
-                        animate__fadeOutDown
-                        animate__faster
-                    `
-                            }
-                        });
-                        navigate('/');
+                        const userInfo = {
+                            name: data.name,
+                            email: data.email
+                        }
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    reset();
+                                    Swal.fire({
+                                        position: "top-end",
+                                        icon: "success",
+                                        title: "User created successfully.",
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                    navigate('/');
+                                }
+                            })
                     })
                     .catch((error) => {
                         console.log(error);
@@ -96,13 +96,14 @@ const SignUp = () => {
                                 {errors.password?.type === "minLength" && <span className="text-red-500">Password must be more than 6 characters.</span>}
                                 {errors.password?.type === "pattern" && <span className="text-red-500">Password must one number, one special character, one uppercase and one lowercase character.</span>}
                                 <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                    <Link to={'/login'}><a href="#" className="label-text-alt link link-hover text-orange-500">Already have an account?</a></Link>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
                             </div>
                         </form>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>
