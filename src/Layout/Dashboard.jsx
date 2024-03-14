@@ -1,12 +1,24 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { FaCartShopping, FaComment, FaEnvelope, FaUserDoctor } from "react-icons/fa6";
 import { FaHome, FaCalendar, FaCommentMedical, FaListAlt, FaBookMedical, FaUserFriends } from "react-icons/fa";
 import { IoTimerSharp } from "react-icons/io5";
 import { IoIosAddCircle } from "react-icons/io";
 import useAdmin from "../hooks/useAdmin";
+import { IoLogOutSharp } from "react-icons/io5";
+import { AuthContext } from "../providers/AuthProvider";
+import { useContext } from "react";
 
 const Dashboard = () => {
-    const [isAdmin]= useAdmin();
+    const [isAdmin] = useAdmin();
+    const { logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { 
+                navigate('/login');
+            })
+            .catch(error => console.log(error))
+    }
     return (
         <div className="flex">
             <div className="w-64 min-h-screen bg-orange-400">
@@ -45,7 +57,7 @@ const Dashboard = () => {
                                     <NavLink to="/dashboard/cart"><FaCartShopping />My Cart</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/dashboard/myAppointments"><IoTimerSharp />Appointments</NavLink>
+                                    <NavLink to="/dashboard/myAppointments"><IoTimerSharp />My Appointments</NavLink>
                                 </li>
                             </>
                     }
@@ -61,6 +73,9 @@ const Dashboard = () => {
                     </li>
                     <li>
                         <NavLink to="/contact"><FaEnvelope />Contact</NavLink>
+                    </li>
+                    <li>
+                        <div onClick={handleLogOut}><IoLogOutSharp />Log Out</div>
                     </li>
                 </ul>
             </div>
