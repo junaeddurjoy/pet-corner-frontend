@@ -7,7 +7,7 @@ const useTreatment = () => {
     // const [service, setService] = useState([]);
     // const [loading, setLoading] = useState(true);
     // useEffect(() => {
-    //     fetch('http://localhost:5000/services')
+    //     fetch('https://pet-corner-backend.vercel.app/services')
     //         .then(res => res.json())
     //         .then(data => {
     //             setService(data);

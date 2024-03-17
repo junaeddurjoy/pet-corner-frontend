@@ -3,7 +3,7 @@ import axios from "axios";
 // import useAuth from "./useAuth";
 
 const axiosSecure = axios.create({
-    baseURL: import.meta.env.VITE_DATA
+    baseURL: 'https://pet-corner-backend.vercel.app'
 })
 const useAxiosSecure = () => {
     // const navigate = useNavigate();

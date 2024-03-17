@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosPublic = axios.create({
-    baseURL: import.meta.env.VITE_DATA
+    baseURL: 'https://pet-corner-backend.vercel.app'
 })
 const useAxiosPublic = () => {
     return axiosPublic;

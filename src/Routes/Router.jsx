@@ -11,15 +11,16 @@ import Dashboard from "../Layout/Dashboard";
 import Cart from "../Pages/Dashboard/Cart/Cart";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import AddItems from "../Pages/Dashboard/AddItems/AddItems";
-import AdminRoute from "./AdminRoute";
+// import AdminRoute from "./AdminRoute";
 import ManageItems from "../Pages/Dashboard/ManageItems/ManageItems";
 import UpdateItem from "../Pages/Dashboard/ManageItems/UpdateItem";
 import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
-import ManageBookings from "../Pages/Dashboard/ManageBookings/ManageBookings";
+// import ManageBookings from "../Pages/Dashboard/ManageBookings/ManageBookings";
 import MyAppointments from "../Pages/Dashboard/MyAppointments/MyAppointments";
 import Review from "../Pages/Dashboard/Review/Review";
 import Reservation from "../Pages/Dashboard/Reservation/Reservation";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
+import Payment from "../Pages/Dashboard/Payment/Payment";
 // import PrivateRoute from "./PrivateRoute"
 export const router = createBrowserRouter([
     {
@@ -57,36 +58,40 @@ export const router = createBrowserRouter([
                 path: 'cart',
                 element: <Cart></Cart>
             },
+            {
+                path: 'payment',
+                element: <Payment></Payment>
+            },
             // admin
             {
                 path: 'adminHome',
-                element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+                element: <AdminHome></AdminHome>
             },
-            {
-                path: 'manageBookings',
-                element: <AdminRoute><ManageBookings></ManageBookings></AdminRoute>
-            },
+            // {
+            //     path: 'manageBookings',
+            //     element: <ManageBookings></ManageBookings>
+            // },
             {
                 path: 'allUsers',
-                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+                element: <AllUsers></AllUsers>
             },
             {
                 path: 'addItems',
-                element: <AdminRoute><AddItems></AddItems></AdminRoute>
+                element: <AddItems></AddItems>
             },
             {
                 path: 'updateItem/:id',
-                element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+                element: <UpdateItem></UpdateItem>,
+                loader: ({params}) => fetch(`https://pet-corner-backend.vercel.app/services/${params.id}`)
             },
             {
                 path: 'manageItems',
-                element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
+                element: <ManageItems></ManageItems>
             },
             // user
             {
-                path: 'adminHome',
-                element: <AdminHome></AdminHome>
+                path: 'userHome',
+                element: <UserHome></UserHome>
             },
             {
                 path: 'myAppointments',
